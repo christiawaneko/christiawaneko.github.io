@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://christiawaneko.github.io/atom.xml" rel="self"/>
   <link href="http://christiawaneko.github.io/"/>
-  <updated>2017-11-05T12:06:44+07:00</updated>
+  <updated>2017-11-05T12:37:27+07:00</updated>
   <id>http://christiawaneko.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -18,7 +18,7 @@
     <link href="http://christiawaneko.github.io/blog/2017/11/05/building-successful/"/>
     <updated>2017-11-05T12:06:18+07:00</updated>
     <id>http://christiawaneko.github.io/blog/2017/11/05/building-successful</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<h2>Thanks!</h2>
 ]]></content>
   </entry>
   
