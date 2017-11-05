@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Go | Christiawan Eko]]></title>
   <link href="http://christiawaneko.github.io/blog/categories/go/atom.xml" rel="self"/>
   <link href="http://christiawaneko.github.io/"/>
-  <updated>2017-11-05T23:26:54+07:00</updated>
+  <updated>2017-11-06T00:06:25+07:00</updated>
   <id>http://christiawaneko.github.io/</id>
   <author>
     <name><![CDATA[Christiawan Eko S]]></name>
@@ -53,52 +53,78 @@
 </ul>
 
 
-<p>{% codeblock lang:objc %}
-<association ext=".go" id="go"/> untuk notepad++ versi 6.4.</p>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&lt;</span><span class="n">association</span> <span class="n">ext</span><span class="o">=</span><span class="s">&quot;.go&quot;</span> <span class="kt">id</span><span class="o">=</span><span class="s">&quot;go&quot;</span><span class="o">/&gt;</span> <span class="n">untuk</span> <span class="n">notepad</span><span class="o">++</span> <span class="n">versi</span> <span class="mf">6.4</span><span class="p">.</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;&lt;</span><span class="n">association</span> <span class="n">userDefinedLangName</span><span class="o">=</span><span class="s">&quot;go&quot;</span> <span class="kt">id</span><span class="o">=</span><span class="s">&quot;go&quot;</span><span class="o">/&gt;</span> <span class="n">untuk</span> <span class="n">notepad</span><span class="o">++</span> <span class="n">versi</span> <span class="mf">6.5</span> <span class="n">ke</span> <span class="n">atas</span><span class="p">.</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
-<p><association userDefinedLangName="go" id="go"/> untuk notepad++ versi 6.5 ke atas.
-{% endcodeblock %}</p>
-
-<p>{% img <a href="http://nordskriving.files.wordpress.com/2014/04/gonpp01.png">http://nordskriving.files.wordpress.com/2014/04/gonpp01.png</a> %}</p>
+<p><img class="<a" src="href="http://nordskriving.files.wordpress.com/2014/04/gonpp01.png">http://nordskriving.files.wordpress.com/2014/04/gonpp01.png</a>"></p>
 
 <ul>
 <li>Lalu tambahkan kode berikut di antara tag <code>&lt;parser&gt; …. &lt;/parser&gt;</code></li>
 </ul>
 
 
-<p>{% codeblock lang:objc %}
-<parser id="go" displayName="Go" commentExpr="((/\*.*?\*)/|(//.*?$))">
-   <classRange mainExpr="^type\s+\w+\s+interface\s*\{" openSymbole = "\{" closeSymbole = "\}" displayMode="node">
-    <className>
-       <nameExpr expr="type\s+\w+"/>
-       <nameExpr expr="\s+\w+"/>
-           <nameExpr expr="\w+"/>
-    </className>
-    <function mainExpr="^\s+\w+\s*\(">
-       <functionName>
-          <funcNameExpr expr="\w+"/>
-       </functionName>
-        </function>
-     </classRange>
-     <function mainExpr="(^func\s+\w+)|(^func\s*\(\s*\w*\s*\*?\s*\w+\s*\)\s*\w+)" displayMode="$className->$functionName">
-    <functionName>
-        <nameExpr expr="((func\s+\w+)|(\)\s*\w+))"/>
-        <nameExpr expr="((\s+\w+)|(\)\s*\w+))"/>
-        <nameExpr expr="\w+"/>
-    </functionName>
-        <className>
-        <nameExpr expr="\w+\s*\)"/>
-        <nameExpr expr="\w+"/>
-    </className>
-      </function>
-</parser>
-{% endcodeblock %}</p>
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&lt;</span><span class="n">parser</span> <span class="kt">id</span><span class="o">=</span><span class="s">&quot;go&quot;</span> <span class="n">displayName</span><span class="o">=</span><span class="s">&quot;Go&quot;</span> <span class="n">commentExpr</span><span class="o">=</span><span class="s">&quot;((/\*.*?\*)/|(//.*?$))&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>   <span class="o">&lt;</span><span class="n">classRange</span> <span class="n">mainExpr</span><span class="o">=</span><span class="s">&quot;^type\s+\w+\s+interface\s*\{&quot;</span> <span class="n">openSymbole</span> <span class="o">=</span> <span class="s">&quot;\{&quot;</span> <span class="n">closeSymbole</span> <span class="o">=</span> <span class="s">&quot;\}&quot;</span> <span class="n">displayMode</span><span class="o">=</span><span class="s">&quot;node&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>    <span class="o">&lt;</span><span class="n">className</span><span class="o">&gt;</span>
+</span><span class='line'>       <span class="o">&lt;</span><span class="n">nameExpr</span> <span class="n">expr</span><span class="o">=</span><span class="s">&quot;type\s+\w+&quot;</span><span class="o">/&gt;</span>
+</span><span class='line'>       <span class="o">&lt;</span><span class="n">nameExpr</span> <span class="n">expr</span><span class="o">=</span><span class="s">&quot;\s+\w+&quot;</span><span class="o">/&gt;</span>
+</span><span class='line'>           <span class="o">&lt;</span><span class="n">nameExpr</span> <span class="n">expr</span><span class="o">=</span><span class="s">&quot;\w+&quot;</span><span class="o">/&gt;</span>
+</span><span class='line'>    <span class="o">&lt;/</span><span class="n">className</span><span class="o">&gt;</span>
+</span><span class='line'>    <span class="o">&lt;</span><span class="n">function</span> <span class="n">mainExpr</span><span class="o">=</span><span class="s">&quot;^\s+\w+\s*\(&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>       <span class="o">&lt;</span><span class="n">functionName</span><span class="o">&gt;</span>
+</span><span class='line'>          <span class="o">&lt;</span><span class="n">funcNameExpr</span> <span class="n">expr</span><span class="o">=</span><span class="s">&quot;\w+&quot;</span><span class="o">/&gt;</span>
+</span><span class='line'>       <span class="o">&lt;/</span><span class="n">functionName</span><span class="o">&gt;</span>
+</span><span class='line'>        <span class="o">&lt;/</span><span class="n">function</span><span class="o">&gt;</span>
+</span><span class='line'>     <span class="o">&lt;/</span><span class="n">classRange</span><span class="o">&gt;</span>
+</span><span class='line'>     <span class="o">&lt;</span><span class="n">function</span> <span class="n">mainExpr</span><span class="o">=</span><span class="s">&quot;(^func\s+\w+)|(^func\s*\(\s*\w*\s*\*?\s*\w+\s*\)\s*\w+)&quot;</span> <span class="n">displayMode</span><span class="o">=</span><span class="s">&quot;$className-&gt;$functionName&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>    <span class="o">&lt;</span><span class="n">functionName</span><span class="o">&gt;</span>
+</span><span class='line'>        <span class="o">&lt;</span><span class="n">nameExpr</span> <span class="n">expr</span><span class="o">=</span><span class="s">&quot;((func\s+\w+)|(\)\s*\w+))&quot;</span><span class="o">/&gt;</span>
+</span><span class='line'>        <span class="o">&lt;</span><span class="n">nameExpr</span> <span class="n">expr</span><span class="o">=</span><span class="s">&quot;((\s+\w+)|(\)\s*\w+))&quot;</span><span class="o">/&gt;</span>
+</span><span class='line'>        <span class="o">&lt;</span><span class="n">nameExpr</span> <span class="n">expr</span><span class="o">=</span><span class="s">&quot;\w+&quot;</span><span class="o">/&gt;</span>
+</span><span class='line'>    <span class="o">&lt;/</span><span class="n">functionName</span><span class="o">&gt;</span>
+</span><span class='line'>        <span class="o">&lt;</span><span class="n">className</span><span class="o">&gt;</span>
+</span><span class='line'>        <span class="o">&lt;</span><span class="n">nameExpr</span> <span class="n">expr</span><span class="o">=</span><span class="s">&quot;\w+\s*\)&quot;</span><span class="o">/&gt;</span>
+</span><span class='line'>        <span class="o">&lt;</span><span class="n">nameExpr</span> <span class="n">expr</span><span class="o">=</span><span class="s">&quot;\w+&quot;</span><span class="o">/&gt;</span>
+</span><span class='line'>    <span class="o">&lt;/</span><span class="n">className</span><span class="o">&gt;</span>
+</span><span class='line'>      <span class="o">&lt;/</span><span class="n">function</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">parser</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>Kalian juga bisa melihat letak kodenya pada file functionList.xml dari file yang kalian download sebelumnya. Sudah cukup jelas, disertakan juga tag-tag yang berada pada file asli.</p>
 
 <p>Jika notepad++ dalam posisi terbuka maka tutup dan buka kembali notepad++ mu. Coba lihat pada menu Language sekarang ada go, di bawah menu Define your language.</p>
 
-<p>{% img <a href="http://nordskriving.files.wordpress.com/2014/04/gonpp02.png">http://nordskriving.files.wordpress.com/2014/04/gonpp02.png</a> %}</p>
+<p><img class="<a" src="href="http://nordskriving.files.wordpress.com/2014/04/gonpp02.png">http://nordskriving.files.wordpress.com/2014/04/gonpp02.png</a>"></p>
 
 <p>Oke deh selesai , thx to temen smk <code>ntw</code></p>
 
@@ -128,13 +154,13 @@ di Artikel sebelum'nya sudah di bahas , apa sih itu Go &ldquo; <a href="http://c
 <!-- more -->
 
 
-<p>{% img <a href="http://imagizer.imageshack.us/v2/280x200q90/673/bvcpuu.jpg">http://imagizer.imageshack.us/v2/280x200q90/673/bvcpuu.jpg</a> 200 300 %}</p>
+<p><img class="<a" src="href="http://imagizer.imageshack.us/v2/280x200q90/673/bvcpuu.jpg">http://imagizer.imageshack.us/v2/280x200q90/673/bvcpuu.jpg</a>" width="200" height="300"></p>
 
 <ul>
 <li>setelah itu coba buka CMD dan ketikkan
-{% codeblock CMD %}
-go version
-{% endcodeblock %}</li>
+<figure class='code'><figcaption><span>CMD </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>go version</span></code></pre></td></tr></table></div></figure></li>
 <li>Oke Sudah Selesai Deh Installasi di Widows</li>
 </ul>
 
@@ -147,18 +173,19 @@ go version
 <blockquote><p>Download sesuai sistem operasi yang digunakan.
 Karena di sini saya menggunakan OS Linux CentOS x86_64, maka saya men-download yang : <strong>go1.3.1.linux-amd64.tar.gz</strong></p></blockquote></li>
 <li><p>Extract file yang sudah di-download :
-{% codeblock Terminal %}
-tar -C /usr/local/ -xvzf go1.0.2.linux-amd64.tar.gz
-{% endcodeblock %}</p></li>
+<figure class='code'><figcaption><span>Terminal </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>tar -C /usr/local/ -xvzf go1.0.2.linux-amd64.tar.gz</span></code></pre></td></tr></table></div></figure></p></li>
 <li><p>Menambahkan ke Path
-{% codeblock Terminal %}
-$ export PATH=$PATH:/usr/local/go/bin
-$ echo $PATH //Untuk Melihat Path
-{% endcodeblock %}</p></li>
+<figure class='code'><figcaption><span>Terminal </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ export PATH=$PATH:/usr/local/go/bin
+</span><span class='line'>$ echo $PATH //Untuk Melihat Path</span></code></pre></td></tr></table></div></figure></p></li>
 <li><p>setelah itu coba buka Terminal
-{% codeblock CMD %}
-go version
-{% endcodeblock %}</p></li>
+<figure class='code'><figcaption><span>CMD </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>go version</span></code></pre></td></tr></table></div></figure></p></li>
 <li>Oke Sudah Selesai Deh Installasi di Linux</li>
 </ul>
 
