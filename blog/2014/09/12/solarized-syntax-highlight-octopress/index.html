@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Building Successful - Christiawan Eko</title>
+  <title>Solarized Highlight Octopress - Christiawan Eko</title>
   <meta name="author" content="Christiawan Eko S">
 
   
-  <meta name="description" content="Thanks!
-">
+  <meta name="description" content="Hallo temen" , buat temen" yang baru install octopress nih , dan pernah mengalami kendala saat membuat codeblock namun menggunakan syntax highlight &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://christiawaneko.github.io/blog/2017/11/05/building-successful/">
+  <link rel="canonical" href="http://christiawaneko.github.io/blog/2014/09/12/solarized-syntax-highlight-octopress/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Christiawan Eko" type="application/atom+xml">
@@ -83,7 +82,7 @@
   
   <header>
     
-      <h1 class="entry-title">Building Successful</h1>
+      <h1 class="entry-title">Solarized Highlight Octopress</h1>
     
     
       <p class="meta">
@@ -92,7 +91,7 @@
 
 
 
-<time class='entry-date' datetime='2017-11-05T12:06:18+07:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>5</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>12:06 pm</span></time>
+<time class='entry-date' datetime='2014-09-12T01:44:36+07:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>12</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>1:44 am</span></time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://christiawaneko.github.io">Comments</a>
@@ -102,7 +101,38 @@
   </header>
 
 
-<div class="entry-content"><h2>Thanks!</h2>
+<div class="entry-content"><p>Hallo temen" , buat temen" yang baru install octopress nih , dan pernah mengalami kendala saat membuat <code>codeblock</code> namun menggunakan <code>syntax highlight</code> fitur itu tidak malah bekerja</p>
+
+<p>ketika menggunakan embed <a href="http://octopress.org/docs/plugins/codeblock/" title="codeblock">codeblock syntax highlighting </a>  , saya preview di localhost , dan terjadilah <code>BLANK WHITE</code> warna putih doang -_-&lsquo; , setelah googling beberapa hari akhir'nya nemu juga , ternyata yg jadi masalah adalah fitur Syntax Highlighting membutuhkan pygments , yang berjalan di phyton , oke sekarang ikuti cara di bawah , biar bisa <code>Solped</code></p>
+
+<!-- more -->
+
+
+<ol>
+<li>Download <a href="www.activestate.com/activepython/downloads" title="activepython">Activepython</a> dan install , setelah di install jangan lupa untuk membuat <code>PATH variable #Windows</code></li>
+<li>setelah Activepython terinstall kita install <code>pygments</code> lewat CMD</li>
+</ol>
+
+
+<figure class='code'><figcaption><span>CMD </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">easy_install</span> <span class="n">pygments</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>sekarang coba preview deh : <code>rake generate &amp;&amp; rake preview</code></p>
+
+<p>Oke sebenarnya octopress menggunakan <code>solarized</code> untuk highlight , seperti judul'nya , untuk memodifikasi'nya , bisa di buka : <code>sass/custom/_colors.scss</code> . untuk mengganti color scheme , bisa di ganti di :</p>
+
+<figure class='code'><figcaption><span>_colors.scss </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="c1">//$solarized: light;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Oke , cukup sekian artike'nya ya :)</p>
+
+<p>tunggu Artike" yang menarik ke depan'nya XD</p>
 </div>
 
 
@@ -118,8 +148,14 @@
 
 
 
-<time class='entry-date' datetime='2017-11-05T12:06:18+07:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>5</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>12:06 pm</span></time>
+<time class='entry-date' datetime='2014-09-12T01:44:36+07:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>12</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>1:44 am</span></time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/octopress/'>octopress</a>
+  
+</span>
 
 
     </p>
@@ -133,8 +169,10 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/10/16/notepad-plus-plus-for-go-programming/" title="Previous Post: Notepad++ for Go Programming">&laquo; Notepad++ for Go Programming</a>
+        <a class="basic-alignment left" href="/blog/2014/09/11/ubah-domain-github-dot-io-menjadi-domain-sendiri/" title="Previous Post: Ubah domain Github.io">&laquo; Ubah domain Github.io</a>
       
+      
+        <a class="basic-alignment right" href="/blog/2014/09/18/instalasi-go/" title="Next Post: Instalasi Go">Instalasi Go &raquo;</a>
       
     </p>
   </footer>
@@ -229,8 +267,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://christiawaneko.github.io/blog/2017/11/05/building-successful/';
-        var disqus_url = 'http://christiawaneko.github.io/blog/2017/11/05/building-successful/';
+        var disqus_identifier = 'http://christiawaneko.github.io/blog/2014/09/12/solarized-syntax-highlight-octopress/';
+        var disqus_url = 'http://christiawaneko.github.io/blog/2014/09/12/solarized-syntax-highlight-octopress/';
         var disqus_script = 'embed.js';
       
     (function () {

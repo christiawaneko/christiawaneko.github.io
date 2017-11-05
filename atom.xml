@@ -4,7 +4,7 @@
   <title><![CDATA[Christiawan Eko]]></title>
   <link href="http://christiawaneko.github.io/atom.xml" rel="self"/>
   <link href="http://christiawaneko.github.io/"/>
-  <updated>2017-11-05T14:47:21+07:00</updated>
+  <updated>2017-11-05T15:24:24+07:00</updated>
   <id>http://christiawaneko.github.io/</id>
   <author>
     <name><![CDATA[Christiawan Eko S]]></name>
@@ -19,6 +19,578 @@
     <updated>2017-11-05T12:06:18+07:00</updated>
     <id>http://christiawaneko.github.io/blog/2017/11/05/building-successful</id>
     <content type="html"><![CDATA[<h2>Thanks!</h2>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Notepad++ for Go Programming]]></title>
+    <link href="http://christiawaneko.github.io/blog/2014/10/16/notepad-plus-plus-for-go-programming/"/>
+    <updated>2014-10-16T01:47:38+07:00</updated>
+    <id>http://christiawaneko.github.io/blog/2014/10/16/notepad-plus-plus-for-go-programming</id>
+    <content type="html"><![CDATA[<p>Sebelumnya install Golangnya dulu, silahkan baca tulisan <a href="http://christiawan.web.id/blog/2014/09/18/instalasi-go/">Install Go !</a></p>
+
+<p>jangan lupa install <code>Notepad++</code> download di website resmi <a href="http://notepad-plus-plus.org/">Notepad++</a></p>
+
+<h2>kenapa Notepad++ ?</h2>
+
+<p><code>kenapa pakai Notepad++  ?</code> kan masih ada Editor yang lebih keren dan lebih lengkap ? Seperti</p>
+
+<!-- more -->
+
+
+<ul>
+<li><a href="http://christiawan.web.id/blog/2014/09/18/ide-intellij-idea-for-go-programming/">IDE IntelliJ IDEA  </a></li>
+<li>Eclipse -> Artikel Menyusul</li>
+<li>Sublime -> Artikel Menyusul</li>
+<li>Gedit</li>
+<li>TextMate</li>
+<li>Vim+ vim-go</li>
+<li>&mdash; Dan masih banyak lagi deh hehehe &mdash;</li>
+</ul>
+
+
+<p>menurut saya (<a href="https://www.facebook.com/christiawaneko">Author</a>) Notepad++ cukup ringan , dan bisa di bilang sangat ringan, nyaman dan yang penting <code>GRATIS</code></p>
+
+<h2>Setting</h2>
+
+<ul>
+<li>Pertama downlad file yang di butuhkan <a href="https://drive.google.com/file/d/0B1CvbY9bU5v-d3cwTF80d0d6Sjg/view?usp=sharing">Golangnpp</a></li>
+<li>ekstrak file tersebut dan akan ada 3 file: functionList.xml, go.xml, dan userDefineLang.xml</li>
+<li>copy go.xml ke direktori APIs notepad++ (mis. C:\Program Files\Notepad++\Plugins\APIs)</li>
+<li>buka notepad++ → Language → Define your language… → Import userDefineLang.xml → Tutup notepad++</li>
+<li>buka functionList.xml pada direktori notepad++, lalu tambahkan baris kode berikut di antara tag  <code>&lt;associationMap&gt; …. &lt;/associationMap&gt;</code></li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&lt;</span><span class="n">association</span> <span class="n">ext</span><span class="o">=</span><span class="s">&quot;.go&quot;</span> <span class="kt">id</span><span class="o">=</span><span class="s">&quot;go&quot;</span><span class="o">/&gt;</span> <span class="n">untuk</span> <span class="n">notepad</span><span class="o">++</span> <span class="n">versi</span> <span class="mf">6.4</span><span class="p">.</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">association</span> <span class="n">userDefinedLangName</span><span class="o">=</span><span class="s">&quot;go&quot;</span> <span class="kt">id</span><span class="o">=</span><span class="s">&quot;go&quot;</span><span class="o">/&gt;</span> <span class="n">untuk</span> <span class="n">notepad</span><span class="o">++</span> <span class="n">versi</span> <span class="mf">6.5</span> <span class="n">ke</span> <span class="n">atas</span><span class="p">.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><img src="http://nordskriving.files.wordpress.com/2014/04/gonpp01.png"></p>
+
+<ul>
+<li>Lalu tambahkan kode berikut di antara tag <code>&lt;parser&gt; …. &lt;/parser&gt;</code></li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&lt;</span><span class="n">parser</span> <span class="kt">id</span><span class="o">=</span><span class="s">&quot;go&quot;</span> <span class="n">displayName</span><span class="o">=</span><span class="s">&quot;Go&quot;</span> <span class="n">commentExpr</span><span class="o">=</span><span class="s">&quot;((/\*.*?\*)/|(//.*?$))&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>   <span class="o">&lt;</span><span class="n">classRange</span> <span class="n">mainExpr</span><span class="o">=</span><span class="s">&quot;^type\s+\w+\s+interface\s*\{&quot;</span> <span class="n">openSymbole</span> <span class="o">=</span> <span class="s">&quot;\{&quot;</span> <span class="n">closeSymbole</span> <span class="o">=</span> <span class="s">&quot;\}&quot;</span> <span class="n">displayMode</span><span class="o">=</span><span class="s">&quot;node&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>    <span class="o">&lt;</span><span class="n">className</span><span class="o">&gt;</span>
+</span><span class='line'>       <span class="o">&lt;</span><span class="n">nameExpr</span> <span class="n">expr</span><span class="o">=</span><span class="s">&quot;type\s+\w+&quot;</span><span class="o">/&gt;</span>
+</span><span class='line'>       <span class="o">&lt;</span><span class="n">nameExpr</span> <span class="n">expr</span><span class="o">=</span><span class="s">&quot;\s+\w+&quot;</span><span class="o">/&gt;</span>
+</span><span class='line'>           <span class="o">&lt;</span><span class="n">nameExpr</span> <span class="n">expr</span><span class="o">=</span><span class="s">&quot;\w+&quot;</span><span class="o">/&gt;</span>
+</span><span class='line'>    <span class="o">&lt;/</span><span class="n">className</span><span class="o">&gt;</span>
+</span><span class='line'>    <span class="o">&lt;</span><span class="n">function</span> <span class="n">mainExpr</span><span class="o">=</span><span class="s">&quot;^\s+\w+\s*\(&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>       <span class="o">&lt;</span><span class="n">functionName</span><span class="o">&gt;</span>
+</span><span class='line'>          <span class="o">&lt;</span><span class="n">funcNameExpr</span> <span class="n">expr</span><span class="o">=</span><span class="s">&quot;\w+&quot;</span><span class="o">/&gt;</span>
+</span><span class='line'>       <span class="o">&lt;/</span><span class="n">functionName</span><span class="o">&gt;</span>
+</span><span class='line'>        <span class="o">&lt;/</span><span class="n">function</span><span class="o">&gt;</span>
+</span><span class='line'>     <span class="o">&lt;/</span><span class="n">classRange</span><span class="o">&gt;</span>
+</span><span class='line'>     <span class="o">&lt;</span><span class="n">function</span> <span class="n">mainExpr</span><span class="o">=</span><span class="s">&quot;(^func\s+\w+)|(^func\s*\(\s*\w*\s*\*?\s*\w+\s*\)\s*\w+)&quot;</span> <span class="n">displayMode</span><span class="o">=</span><span class="s">&quot;$className-&gt;$functionName&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>    <span class="o">&lt;</span><span class="n">functionName</span><span class="o">&gt;</span>
+</span><span class='line'>        <span class="o">&lt;</span><span class="n">nameExpr</span> <span class="n">expr</span><span class="o">=</span><span class="s">&quot;((func\s+\w+)|(\)\s*\w+))&quot;</span><span class="o">/&gt;</span>
+</span><span class='line'>        <span class="o">&lt;</span><span class="n">nameExpr</span> <span class="n">expr</span><span class="o">=</span><span class="s">&quot;((\s+\w+)|(\)\s*\w+))&quot;</span><span class="o">/&gt;</span>
+</span><span class='line'>        <span class="o">&lt;</span><span class="n">nameExpr</span> <span class="n">expr</span><span class="o">=</span><span class="s">&quot;\w+&quot;</span><span class="o">/&gt;</span>
+</span><span class='line'>    <span class="o">&lt;/</span><span class="n">functionName</span><span class="o">&gt;</span>
+</span><span class='line'>        <span class="o">&lt;</span><span class="n">className</span><span class="o">&gt;</span>
+</span><span class='line'>        <span class="o">&lt;</span><span class="n">nameExpr</span> <span class="n">expr</span><span class="o">=</span><span class="s">&quot;\w+\s*\)&quot;</span><span class="o">/&gt;</span>
+</span><span class='line'>        <span class="o">&lt;</span><span class="n">nameExpr</span> <span class="n">expr</span><span class="o">=</span><span class="s">&quot;\w+&quot;</span><span class="o">/&gt;</span>
+</span><span class='line'>    <span class="o">&lt;/</span><span class="n">className</span><span class="o">&gt;</span>
+</span><span class='line'>      <span class="o">&lt;/</span><span class="n">function</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">parser</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Kalian juga bisa melihat letak kodenya pada file functionList.xml dari file yang kalian download sebelumnya. Sudah cukup jelas, disertakan juga tag-tag yang berada pada file asli.</p>
+
+<p>Jika notepad++ dalam posisi terbuka maka tutup dan buka kembali notepad++ mu. Coba lihat pada menu Language sekarang ada go, di bawah menu Define your language.</p>
+
+<p><img src="http://nordskriving.files.wordpress.com/2014/04/gonpp02.png"></p>
+
+<p>Oke deh selesai , thx to temen smk <code>ntw</code></p>
+
+<p>cukup sekian bila ada yang masih bingung bisa koment atau chat fb</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Instalasi Go]]></title>
+    <link href="http://christiawaneko.github.io/blog/2014/09/18/instalasi-go/"/>
+    <updated>2014-09-18T16:49:43+07:00</updated>
+    <id>http://christiawaneko.github.io/blog/2014/09/18/instalasi-go</id>
+    <content type="html"><![CDATA[<p>Hallo temen" kali ini mau share cara install Go nih di <code>Windows</code> + <code>Linux</code> ,
+di Artikel sebelum'nya sudah di bahas , apa sih itu Go &ldquo; <a href="http://christiawan.web.id/blog/2014/07/24/bahasa-pemrograman-google/" title="Bahasa Pemrogramman Google">Bahasa Pemrogramman Google</a> &rdquo;</p>
+
+<p>Oke Lanjut , ke praktek'nya</p>
+
+<h2>Install Go di Windows</h2>
+
+<ul>
+<li>Download Installer Go di <a href="http://golang.org/dl/" title="Les't Go !">Go distribution</a></li>
+<li>Install ( Next Aja Terus ) Default install go di <code>C:\Go</code></li>
+<li>Lalu Tambahkan GOPATH dan GOROOT di <code>Environment Variable</code> Seperti Di Bawah ini</li>
+</ul>
+
+
+<!-- more -->
+
+
+<p><img src="http://imagizer.imageshack.us/v2/280x200q90/673/bvcpuu.jpg" width="200" height="300"></p>
+
+<ul>
+<li>setelah itu coba buka CMD dan ketikkan</li>
+</ul>
+
+
+<figure class='code'><figcaption><span>CMD </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>go version</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Oke Sudah Selesai Deh Installasi di Widows</li>
+</ul>
+
+
+<h2>Install Go di Linux</h2>
+
+<ul>
+<li><p>Download Installer Go di <a href="http://golang.org/dl/" title="Les't Go !">Go distribution</a></p>
+
+<blockquote><p>Download sesuai sistem operasi yang digunakan.
+Karena di sini saya menggunakan OS Linux CentOS x86_64, maka saya men-download yang : <strong>go1.3.1.linux-amd64.tar.gz</strong></p></blockquote></li>
+<li><p>Extract file yang sudah di-download :</p></li>
+</ul>
+
+
+<figure class='code'><figcaption><span>Terminal </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>tar -C /usr/local/ -xvzf go1.0.2.linux-amd64.tar.gz</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Menambahkan ke Path</li>
+</ul>
+
+
+<figure class='code'><figcaption><span>Terminal </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ export PATH=$PATH:/usr/local/go/bin
+</span><span class='line'>$ echo $PATH //Untuk Melihat Path</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>setelah itu coba buka Terminal</li>
+</ul>
+
+
+<figure class='code'><figcaption><span>CMD </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>go version</span></code></pre></td></tr></table></div></figure>
+
+
+<p>
+- Oke Sudah Selesai Deh Installasi di Linux</p>
+
+<p>Oke Cukup sekian Installasi , Next Artikel berikut'nya mungkin Instalasi IDE untuk Golang</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Solarized Highlight Octopress]]></title>
+    <link href="http://christiawaneko.github.io/blog/2014/09/12/solarized-syntax-highlight-octopress/"/>
+    <updated>2014-09-12T01:44:36+07:00</updated>
+    <id>http://christiawaneko.github.io/blog/2014/09/12/solarized-syntax-highlight-octopress</id>
+    <content type="html"><![CDATA[<p>Hallo temen" , buat temen" yang baru install octopress nih , dan pernah mengalami kendala saat membuat <code>codeblock</code> namun menggunakan <code>syntax highlight</code> fitur itu tidak malah bekerja</p>
+
+<p>ketika menggunakan embed <a href="http://octopress.org/docs/plugins/codeblock/" title="codeblock">codeblock syntax highlighting </a>  , saya preview di localhost , dan terjadilah <code>BLANK WHITE</code> warna putih doang -_-&lsquo; , setelah googling beberapa hari akhir'nya nemu juga , ternyata yg jadi masalah adalah fitur Syntax Highlighting membutuhkan pygments , yang berjalan di phyton , oke sekarang ikuti cara di bawah , biar bisa <code>Solped</code></p>
+
+<!-- more -->
+
+
+<ol>
+<li>Download <a href="www.activestate.com/activepython/downloads" title="activepython">Activepython</a> dan install , setelah di install jangan lupa untuk membuat <code>PATH variable #Windows</code></li>
+<li>setelah Activepython terinstall kita install <code>pygments</code> lewat CMD</li>
+</ol>
+
+
+<figure class='code'><figcaption><span>CMD </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">easy_install</span> <span class="n">pygments</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>sekarang coba preview deh : <code>rake generate &amp;&amp; rake preview</code></p>
+
+<p>Oke sebenarnya octopress menggunakan <code>solarized</code> untuk highlight , seperti judul'nya , untuk memodifikasi'nya , bisa di buka : <code>sass/custom/_colors.scss</code> . untuk mengganti color scheme , bisa di ganti di :</p>
+
+<figure class='code'><figcaption><span>_colors.scss </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="c1">//$solarized: light;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Oke , cukup sekian artike'nya ya :)</p>
+
+<p>tunggu Artike" yang menarik ke depan'nya XD</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ubah Domain Github.io]]></title>
+    <link href="http://christiawaneko.github.io/blog/2014/09/11/ubah-domain-github-dot-io-menjadi-domain-sendiri/"/>
+    <updated>2014-09-11T04:23:16+07:00</updated>
+    <id>http://christiawaneko.github.io/blog/2014/09/11/ubah-domain-github-dot-io-menjadi-domain-sendiri</id>
+    <content type="html"><![CDATA[<p>Oke kali ini akan share cara mengubah domain Github.io
+sebenar'nya sih Github support custom domain. Jika sebelumnya Octopress anda beralamat <code>http://username.github.io</code>  maka bisa diubah menjadi <code>http://domainanda.com</code> seperti domain milik saya sekarang <a href="http://christiawan.web.id/" title="Christiawan.web.id">christiawan.web.id</a></p>
+
+<p>Yang perlu di persiapkan cuma satu , yaitu : <code>Domain Pribadi</code></p>
+
+<p>untuk membeli domain pribadi , saya sendiri membeli di <a href="http://domosquare.com/" title="domosquare">domosquare</a> #bukan promosi loh ya :3</p>
+
+<p>namun untuk pengaturan DNS'nya  , saya menggunakan <a href="http://cloudflare.com/" title="cloudflare">cloudflare</a> yang di buat menggunakan bahasa Go</p>
+
+<!-- more -->
+
+
+<ol>
+<li>oke balik lagi ke Octopress , masuk ke folder Octopress anda</li>
+<li>lalu buat 1 file , dan beri nama <code>CNAME</code> #TANPA EXTENSION apapun</li>
+<li>isi file tersebut dengan domain anda misal : <code>christiawan.web.id</code></li>
+<li>lalu save</li>
+</ol>
+
+
+<p>Rubah DNS register domain anda,
+sperti gambar di bawah ini :</p>
+
+<p><img  src="http://christiawaneko.github.io/image_post/dns.record.jpg" /></img></p>
+
+<p>untuk pointing domain ke IP github. Selengkapnya bisa anda baca disini <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages">Setting up a custom domain with GitHub Pages</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Upload Octopress Ke Github]]></title>
+    <link href="http://christiawaneko.github.io/blog/2014/09/08/upload-octopress-ke-github/"/>
+    <updated>2014-09-08T17:47:25+07:00</updated>
+    <id>http://christiawaneko.github.io/blog/2014/09/08/upload-octopress-ke-github</id>
+    <content type="html"><![CDATA[<p>Lanjut dari Artikel kemaren yaitu <a href="http:///blog/2014/09/08/install-octopress-di-windows/">Install Octopress</a> , sekarang waktu'nya kita Upload Octopress ke Github :)</p>
+
+<p>Apa sih itu Github ?</p>
+
+<blockquote><p>Layanan berbasis web hosting untuk proyek-proyek pengembangan perangkat lunak yang menggunakan sistem kontrol revisi Git</p></blockquote>
+
+<p>Mungkin artikel berikut'nya akan membahas tentang git deh :) , sekarang nyelesain artikel tentang Octopress sampe jadi dulu XD</p>
+
+<!-- more -->
+
+
+<h2>Buat Account di Github</h2>
+
+<p>Buat Account terlebih dahulu di : <a href="https://github.com/join/">Join Github</a> , isi <code>Username - Alamat Email - Password</code> lalu Create an account</p>
+
+<h2>Generate dan Import SSH key ke Github</h2>
+
+<p>Di github , untuk mengupload konten semua melalu <strong>SSH</strong>, untuk itu kita harus punya public key dari komputer sebagai pengakses . untuk paduan SSH kalian bisa pelajari di <a href="https://help.github.com/articles/generating-ssh-keys">Generate ssh keys</a></p>
+
+<h2>Buat Repository di Github</h2>
+
+<p>untuk mengupload semua file-file Octopress ke Github , terlebih dahulu kita harus membuat sebuah Repository untuk menampung semua file'nya dan kita juga akan mendapat hak akses read and write , untuk membuat Repository bisa di buka di <a href="https://help.github.com/articles/creating-a-new-repository">Creating a new repository</a> , buat sebuah repository dan di berinama :  <code>username_github_anda.github.io</code></p>
+
+<h2>Deploy Octopress</h2>
+
+<p>Masuk ke folder Octopress anda <code>username.github.io</code> di cmd
+dan masukkan command yang di generate pada page Github saat anda membuat Repository</p>
+
+<figure class='code'><figcaption><span>CMD </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd Users/christiawan/Documents/GitHub/christiawan.github.io
+</span><span class='line'>git init
+</span><span class='line'>touch README
+</span><span class='line'>git add README
+</span><span class='line'>git commit -m 'first commit'
+</span><span class='line'>git remote add origin https://github.com/your-username/your-username.github.com.git</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Saat membuat <code>Repository</code> your-username.github.com, anda akan diberikan beberapa pilihan. Anda cukup memilih Next steps:,
+tapi ada beberapa command yang harus disesuaikan dengan konfigurasi pada octopress anda. Berikut adalah command – command yang saya pakai, dan sudah sesuai dengan tutorial ini :</p>
+
+<figure class='code'><figcaption><span>CMD </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>C:\Users\Christiawan\Documents\GitHub\christiawan.web.id>git init
+</span><span class='line'>C:\Users\Christiawan\Documents\GitHub\christiawan.web.id>touch README
+</span><span class='line'>C:\Users\Christiawan\Documents\GitHub\christiawan.web.id>git add README
+</span><span class='line'>C:\Users\Christiawan\Documents\GitHub\christiawan.web.id>git commit -m 'first commit'
+</span><span class='line'>C:\Users\Christiawan\Documents\GitHub\christiawan.web.id>git remote add christiawan.web.id https://github.com/christiawan/christiawan.web.id</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>NB : christiawan.web.id adalah folder octopress</h3>
+
+<p>Setelah itu anda bisa klik <code>continue</code> pada halaman Gihub repository setup. Langkah selanjutnya adalah setup_github_pages di folder octopress anda :</p>
+
+<figure class='code'><figcaption><span>CMD </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>C:\Users\Christiawan\Documents\GitHub\christiawan.web.id>rake setup_github_pages</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><figcaption><span>CMD </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Enter the read/write url for your repository: git@github.com:christiawan/christiawan.web.id
+</span><span class='line'>Added remote git@github.com:christiawan/christiawan.web.id.git as origin
+</span><span class='line'>Set origin as default remote
+</span><span class='line'>Master branch renamed to 'source' for committing your blog source files
+</span><span class='line'>Initialized empty Git repository in C:/Users/Christiawan/Documents/GitHub/christiawan.web.id/_deploy/.git/
+</span><span class='line'>[master (root-commit) 2a4e9e7] Octopress init
+</span><span class='line'>1 files changed, 1 insertions(+), 0 deletions(-)
+</span><span class='line'>create mode 100644 index.html</span></code></pre></td></tr></table></div></figure>
+
+
+<p>langkah selanjut'nya kita deploy ke github , dengan cara</p>
+
+<figure class='code'><figcaption><span>CMD </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>C:\Users\Christiawan\Documents\GitHub\christiawan.web.id>rake generate && rake deploy</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>jika rake deploy error //configurasi Email</h3>
+
+<figure class='code'><figcaption><span>CMD </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git config --global user.email "me@christiawan.web.id" //email yang anda daftarkan pada github</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Oke selesai , untuk upload ke github :)
+sekarang coba deh buka github.io'nya , di browser
+<code>username_anda.github.io</code> biasa'nya sih nunggu agak lama :)</p>
+
+<p>Okee sering mampir di sini yakk , byeee :)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Install Octopress Di Windows]]></title>
+    <link href="http://christiawaneko.github.io/blog/2014/09/08/install-octopress-di-windows/"/>
+    <updated>2014-09-08T16:07:29+07:00</updated>
+    <id>http://christiawaneko.github.io/blog/2014/09/08/install-octopress-di-windows</id>
+    <content type="html"><![CDATA[<p>Hallo kali ini aku akan share nih cara <strong>install Octopress di windows</strong></p>
+
+<p>Sebelum kita install , <code>apa sih itu Octopress</code> ?</p>
+
+<blockquote><p>Octopress is a framework designed for Jekyll, the static blogging engine powering Github Pages. Have a look through the documentation and if you have trouble, I&rsquo;ll be happy to help. If you find errors in the documentation post an issue or fork and send a pull request to the master branch.</p></blockquote>
+
+<p>oke udah tau kan octopress itu &ldquo;<strong>A blogging framework for hackers</strong>&rdquo;</p>
+
+<!-- more -->
+
+
+<p>keren ya subtitle octopress hehehe</p>
+
+<p>Peralatan Yang di siapkan :</p>
+
+<ol>
+<li>Download terlebih dahulu <a href="http://git-scm.com/">Git for Windows</a></li>
+<li>Download <a href="http://rubyinstaller.org/downloads/">Ruby untuk windows</a> saya menggunakan ruby <a href="dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-1.9.3-p545.exe">version 1.9.3 - p545</a></li>
+<li>Download <a href="http://rubyinstaller.org/downloads/">Development Kit</a> saya menggunakan [DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe]<a href="https://github.com/downloads/oneclick/rubyinstaller/DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe">https://github.com/downloads/oneclick/rubyinstaller/DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe</a>)</li>
+</ol>
+
+
+<p>Setelah Semua selesai Download kita install peralatan'nya sebelum perang :</p>
+
+<ol>
+<li>Install Git -> Seperti biasa Next Next Next</li>
+<li>Install Ruby dengan folder installasi di <code>C:/Ruby/Ruby193</code></li>
+<li>Buat Folder Devkit di di dalam Folder Ruby <code>C:/Ruby/Devkit</code> lalu Extract DevKit</li>
+<li>Buat Folder Github di dalam Folder Documents <code>C:/Users/Nama/Documents/GitHub</code></li>
+</ol>
+
+
+<p>Oke Coba kita cek Git &amp; Ruby -> Buka CMD</p>
+
+<figure class='code'><figcaption><span>CMD </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git --version #akan muncul : git version 1.9.4.msysgit.0 
+</span><span class='line'>ruby --version #akan muncul : ruby 1.9.3p545</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Oke Peralatan Sudah siap , waktu'nya kita perang !</p>
+
+<p>Buka CMD</p>
+
+<figure class='code'><figcaption><span>CMD </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd Documents/Github
+</span><span class='line'>git clone git://github.com/imathis/octopress.git christiawan.web.id #ganti christiawan.web.id menjadi username.github.io
+</span><span class='line'>cd christiawan.web.id</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Masih dalam CMD | Lalu kita lanjut ikuti langkah berikut</p>
+
+<figure class='code'><figcaption><span>CMD </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd/Ruby/DevKit
+</span><span class='line'>ruby dk.rb init
+</span><span class='line'>ruby dk.rb install</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Masih dalam CMD | Masuk ke file Octopress</p>
+
+<figure class='code'><figcaption><span>CMD </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd/Users/christiawan/documents/github/christiawan.web.id #ganti christiawan.web.id menjadi username.github.io
+</span><span class='line'>gem install bundler
+</span><span class='line'>bundle install</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Setelah itu kita install octopres</p>
+
+<figure class='code'><figcaption><span>CMD </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake install</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Oke Octopress sudah kita install :)</p>
+
+<p>tapi kita belum selesai ! , karena kita belum konfigurasi <em>config.yml . untuk lebih detail'nya kalian bisa lihat di <a href="http://octopress.org/docs/configuring/">Konfigurasi Octopress</a> namun untuk configurasi awal kita , buka </em>config.yml</p>
+
+<figure class='code'><figcaption><span>_config </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>url: http://christiawan.web.id #ganti dengan username github
+</span><span class='line'>title: I'm Christiawan
+</span><span class='line'>subtitle: ...things I don't want to forget !
+</span><span class='line'>author: Christiawan Eko S
+</span><span class='line'>simple_search: https://www.google.com/search
+</span><span class='line'>description: Cerita & Tutorial Pemrogramman</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Okee ini baru selesai Installasi , eeittss sebelum kita upload coba kita preview di localhost:4000 dulu ! CMD lagi :)</p>
+
+<figure class='code'><figcaption><span>CMD </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate
+</span><span class='line'>rake preview</span></code></pre></td></tr></table></div></figure>
+
+
+<p>nah sekarang coba buka browser lalu , buka localhost:4000
+Nah sekarang bisa deh di upload di server masing" :) kalau ga punya cari yang gratisan contoh : github , yang saya gunakan sekarang</p>
+
+<p>Oke bisa kan ? Sering mampir ke sini ya , untuk tutorial" lain'nya :)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[#1 First Post 'Pindahan']]></title>
+    <link href="http://christiawaneko.github.io/blog/2014/09/07/number-1-first-post/"/>
+    <updated>2014-09-07T20:00:50+07:00</updated>
+    <id>http://christiawaneko.github.io/blog/2014/09/07/number-1-first-post</id>
+    <content type="html"><![CDATA[<p>Pindah Pindah Pindah ke Octopress, hehehe ,</p>
+
+<p>sekarang artikel tutorial di <a href="http://ketikanpelajarbodoh.blogspot.com/">ketikanpelajarbodoh</a> akan pindah di sini loh!</p>
+
+<p><code>kog pindah sih ?</code> kan udah banyak pengunjung di blog <a href="http://ketikanpelajarbodoh.blogspot.com/">ketikanpelajarbodoh</a>  ?</p>
+
+<ul>
+<li>blog <a href="http://ketikanpelajarbodoh.blogspot.com/">ketikanpelajarbodoh</a> akan saya gunakan untuk submit tugas kuliah saya</li>
+<li>web <a href="http://christiawan.web.id">christiawan.web.id</a> akan saya gunakan untuk menulis semua <code>pengalaman</code> , <code>cerita</code> , <code>tutorial</code>  di jamin lebih asik di sini deh ntar :)</li>
+</ul>
+
+
+<!--more-->
+
+
+<p>weittss kenapa harus octopress ? bukan wordpress ?</p>
+
+<ul>
+<li>Mencari pengalaman baru (markdown) + belajar menggunakan github</li>
+<li>Mudah di gunakan</li>
+<li>Simple , karena Octopress itu Framework yang di khususkan untuk blogging ! ga seperti wordpress / blogger sekarang bisa di gunakan untuk apa aja (jualan , dll)</li>
+<li>plugin wordpress terlalu banyak (Banyak banget malah)</li>
+<li>Cepat + Aman karena pure web static ( bukan database ) #keren kan ? XD</li>
+<li>udah terdapat plugin" bawaan yang keren  !</li>
+</ul>
+
+
+<p>mungkin saya ucapkap terimakasih kepada :</p>
+
+<ol>
+<li><strong>Tuhan Yang Maha Esa</strong></li>
+<li><strong>Orang tua</strong></li>
+<li>paman satu ini : <strong><a href="http://sundi3yansyah.com/history/">sundi3yansyah</a></strong></li>
+<li><strong><a href="https://www.cloudflare.com">Cloudflare</a></strong> : untuk layanan CDN dan security web</li>
+</ol>
+
+
+<figure class='code'><figcaption><span>Stay </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Artikel Kedepan mungkin saya gunakan untuk share ilmu & cerita-cerita :)
+</span><span class='line'>Stay di blog aku ini yak :D</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<blockquote><p>Yen Wani Ojo Wedi-wedi, Yen Wedi Ojo Wani-wani</p></blockquote>
+
 ]]></content>
   </entry>
   

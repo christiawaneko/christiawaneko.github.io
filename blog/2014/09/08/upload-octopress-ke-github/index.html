@@ -1,0 +1,366 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Upload Octopress Ke Github - Christiawan Eko</title>
+  <meta name="author" content="Christiawan Eko S">
+
+  
+  <meta name="description" content="Lanjut dari Artikel kemaren yaitu Install Octopress , sekarang waktu'nya kita Upload Octopress ke Github :) Apa sih itu Github ? Layanan berbasis web &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://christiawaneko.github.io/blog/2014/09/08/upload-octopress-ke-github/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Christiawan Eko" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="https://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-109155236-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Christiawan Eko</a></h1>
+  
+    <h2>Learning To Share.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="christiawaneko.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Upload Octopress Ke Github</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-09-08T17:47:25+07:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>5:47 pm</span></time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://christiawaneko.github.io">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Lanjut dari Artikel kemaren yaitu <a href="http:///blog/2014/09/08/install-octopress-di-windows/">Install Octopress</a> , sekarang waktu'nya kita Upload Octopress ke Github :)</p>
+
+<p>Apa sih itu Github ?</p>
+
+<blockquote><p>Layanan berbasis web hosting untuk proyek-proyek pengembangan perangkat lunak yang menggunakan sistem kontrol revisi Git</p></blockquote>
+
+<p>Mungkin artikel berikut'nya akan membahas tentang git deh :) , sekarang nyelesain artikel tentang Octopress sampe jadi dulu XD</p>
+
+<!-- more -->
+
+
+<h2>Buat Account di Github</h2>
+
+<p>Buat Account terlebih dahulu di : <a href="https://github.com/join/">Join Github</a> , isi <code>Username - Alamat Email - Password</code> lalu Create an account</p>
+
+<h2>Generate dan Import SSH key ke Github</h2>
+
+<p>Di github , untuk mengupload konten semua melalu <strong>SSH</strong>, untuk itu kita harus punya public key dari komputer sebagai pengakses . untuk paduan SSH kalian bisa pelajari di <a href="https://help.github.com/articles/generating-ssh-keys">Generate ssh keys</a></p>
+
+<h2>Buat Repository di Github</h2>
+
+<p>untuk mengupload semua file-file Octopress ke Github , terlebih dahulu kita harus membuat sebuah Repository untuk menampung semua file'nya dan kita juga akan mendapat hak akses read and write , untuk membuat Repository bisa di buka di <a href="https://help.github.com/articles/creating-a-new-repository">Creating a new repository</a> , buat sebuah repository dan di berinama :  <code>username_github_anda.github.io</code></p>
+
+<h2>Deploy Octopress</h2>
+
+<p>Masuk ke folder Octopress anda <code>username.github.io</code> di cmd
+dan masukkan command yang di generate pada page Github saat anda membuat Repository</p>
+
+<figure class='code'><figcaption><span>CMD </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd Users/christiawan/Documents/GitHub/christiawan.github.io
+</span><span class='line'>git init
+</span><span class='line'>touch README
+</span><span class='line'>git add README
+</span><span class='line'>git commit -m 'first commit'
+</span><span class='line'>git remote add origin https://github.com/your-username/your-username.github.com.git</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Saat membuat <code>Repository</code> your-username.github.com, anda akan diberikan beberapa pilihan. Anda cukup memilih Next steps:,
+tapi ada beberapa command yang harus disesuaikan dengan konfigurasi pada octopress anda. Berikut adalah command – command yang saya pakai, dan sudah sesuai dengan tutorial ini :</p>
+
+<figure class='code'><figcaption><span>CMD </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>C:\Users\Christiawan\Documents\GitHub\christiawan.web.id>git init
+</span><span class='line'>C:\Users\Christiawan\Documents\GitHub\christiawan.web.id>touch README
+</span><span class='line'>C:\Users\Christiawan\Documents\GitHub\christiawan.web.id>git add README
+</span><span class='line'>C:\Users\Christiawan\Documents\GitHub\christiawan.web.id>git commit -m 'first commit'
+</span><span class='line'>C:\Users\Christiawan\Documents\GitHub\christiawan.web.id>git remote add christiawan.web.id https://github.com/christiawan/christiawan.web.id</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>NB : christiawan.web.id adalah folder octopress</h3>
+
+<p>Setelah itu anda bisa klik <code>continue</code> pada halaman Gihub repository setup. Langkah selanjutnya adalah setup_github_pages di folder octopress anda :</p>
+
+<figure class='code'><figcaption><span>CMD </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>C:\Users\Christiawan\Documents\GitHub\christiawan.web.id>rake setup_github_pages</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><figcaption><span>CMD </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Enter the read/write url for your repository: git@github.com:christiawan/christiawan.web.id
+</span><span class='line'>Added remote git@github.com:christiawan/christiawan.web.id.git as origin
+</span><span class='line'>Set origin as default remote
+</span><span class='line'>Master branch renamed to 'source' for committing your blog source files
+</span><span class='line'>Initialized empty Git repository in C:/Users/Christiawan/Documents/GitHub/christiawan.web.id/_deploy/.git/
+</span><span class='line'>[master (root-commit) 2a4e9e7] Octopress init
+</span><span class='line'>1 files changed, 1 insertions(+), 0 deletions(-)
+</span><span class='line'>create mode 100644 index.html</span></code></pre></td></tr></table></div></figure>
+
+
+<p>langkah selanjut'nya kita deploy ke github , dengan cara</p>
+
+<figure class='code'><figcaption><span>CMD </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>C:\Users\Christiawan\Documents\GitHub\christiawan.web.id>rake generate && rake deploy</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>jika rake deploy error //configurasi Email</h3>
+
+<figure class='code'><figcaption><span>CMD </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git config --global user.email "me@christiawan.web.id" //email yang anda daftarkan pada github</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Oke selesai , untuk upload ke github :)
+sekarang coba deh buka github.io'nya , di browser
+<code>username_anda.github.io</code> biasa'nya sih nunggu agak lama :)</p>
+
+<p>Okee sering mampir di sini yakk , byeee :)</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Christiawan Eko S</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2014-09-08T17:47:25+07:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>5:47 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/octopress/'>octopress</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/09/08/install-octopress-di-windows/" title="Previous Post: Install Octopress di Windows">&laquo; Install Octopress di Windows</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/09/11/ubah-domain-github-dot-io-menjadi-domain-sendiri/" title="Next Post: Ubah domain Github.io">Ubah domain Github.io &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2017/11/05/building-successful/">Building Successful</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/16/notepad-plus-plus-for-go-programming/">Notepad++ for Go Programming</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/18/instalasi-go/">Instalasi Go</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/12/solarized-syntax-highlight-octopress/">Solarized Highlight Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/11/ubah-domain-github-dot-io-menjadi-domain-sendiri/">Ubah Domain Github.io</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/christiawaneko">@christiawaneko</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'christiawaneko',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2017 - Christiawan Eko S -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'christiawaneko';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://christiawaneko.github.io/blog/2014/09/08/upload-octopress-ke-github/';
+        var disqus_url = 'http://christiawaneko.github.io/blog/2014/09/08/upload-octopress-ke-github/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
