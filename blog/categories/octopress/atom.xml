@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Christiawan Eko]]></title>
   <link href="http://christiawaneko.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://christiawaneko.github.io/"/>
-  <updated>2017-11-05T23:21:31+07:00</updated>
+  <updated>2017-11-05T23:26:54+07:00</updated>
   <id>http://christiawaneko.github.io/</id>
   <author>
     <name><![CDATA[Christiawan Eko S]]></name>
@@ -28,20 +28,18 @@
 <ol>
 <li>Download <a href="www.activestate.com/activepython/downloads" title="activepython">Activepython</a> dan install , setelah di install jangan lupa untuk membuat <code>PATH variable #Windows</code></li>
 <li>setelah Activepython terinstall kita install <code>pygments</code> lewat CMD
-<figure class='code'><figcaption><span>CMD </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">easy_install</span> <span class="n">pygments</span>
-</span></code></pre></td></tr></table></div></figure></li>
+{% codeblock lang:objc CMD %}
+easy_install pygments
+{% endcodeblock %}</li>
 </ol>
 
 
 <p>sekarang coba preview deh : <code>rake generate &amp;&amp; rake preview</code></p>
 
 <p>Oke sebenarnya octopress menggunakan <code>solarized</code> untuk highlight , seperti judul'nya , untuk memodifikasi'nya , bisa di buka : <code>sass/custom/_colors.scss</code> . untuk mengganti color scheme , bisa di ganti di :
-<figure class='code'><figcaption><span>_colors.scss </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="c1">//$solarized: light;</span>
-</span></code></pre></td></tr></table></div></figure></p>
+{% codeblock _colors.scss %}
+//$solarized: light;
+{% endcodeblock %}</p>
 
 <p>Oke , cukup sekian artike'nya ya :)</p>
 
@@ -77,7 +75,7 @@ sebenar'nya sih Github support custom domain. Jika sebelumnya Octopress anda ber
 <p>Rubah DNS register domain anda,
 sperti gambar di bawah ini :</p>
 
-<p><img  src="http://christiawaneko.github.io/image_post/dns.record.jpg" /></img></p>
+<p><img  src="{{ site.url }}/image_post/dns.record.jpg" /></img></p>
 
 <p>untuk pointing domain ke IP github. Selengkapnya bisa anda baca disini <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages">Setting up a custom domain with GitHub Pages</a></p>
 ]]></content>
@@ -88,7 +86,7 @@ sperti gambar di bawah ini :</p>
     <link href="http://christiawaneko.github.io/blog/2014/09/08/upload-octopress-ke-github/"/>
     <updated>2014-09-08T17:47:25+07:00</updated>
     <id>http://christiawaneko.github.io/blog/2014/09/08/upload-octopress-ke-github</id>
-    <content type="html"><![CDATA[<p>Lanjut dari Artikel kemaren yaitu <a href="http:///blog/2014/09/08/install-octopress-di-windows/">Install Octopress</a> , sekarang waktu'nya kita Upload Octopress ke Github :)</p>
+    <content type="html"><![CDATA[<p>Lanjut dari Artikel kemaren yaitu <a href="http://{{%20root_url%20}}/blog/2014/09/08/install-octopress-di-windows/">Install Octopress</a> , sekarang waktu'nya kita Upload Octopress ke Github :)</p>
 
 <p>Apa sih itu Github ?</p>
 
@@ -116,67 +114,51 @@ sperti gambar di bawah ini :</p>
 <p>Masuk ke folder Octopress anda <code>username.github.io</code> di cmd
 dan masukkan command yang di generate pada page Github saat anda membuat Repository</p>
 
-<p><figure class='code'><figcaption><span>CMD </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cd Users/christiawan/Documents/GitHub/christiawan.github.io
-</span><span class='line'>git init
-</span><span class='line'>touch README
-</span><span class='line'>git add README
-</span><span class='line'>git commit -m &lsquo;first commit&rsquo;
-</span><span class='line'>git remote add origin &lt;a href="https://github.com/your-username/your-username.github.com.git">https://github.com/your-username/your-username.github.com.git&lt;/a></span></code></pre></td></tr></table></div></figure>
+<p>{% codeblock CMD %}
+cd Users/christiawan/Documents/GitHub/christiawan.github.io
+git init
+touch README
+git add README
+git commit -m &lsquo;first commit&rsquo;
+git remote add origin <a href="https://github.com/your-username/your-username.github.com.git">https://github.com/your-username/your-username.github.com.git</a>
+{% endcodeblock %}
 Saat membuat <code>Repository</code> your-username.github.com, anda akan diberikan beberapa pilihan. Anda cukup memilih Next steps:,
 tapi ada beberapa command yang harus disesuaikan dengan konfigurasi pada octopress anda. Berikut adalah command – command yang saya pakai, dan sudah sesuai dengan tutorial ini :
-<figure class='code'><figcaption><span>CMD </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>C:\Users\Christiawan\Documents\GitHub\christiawan.web.id>git init
-</span><span class='line'>C:\Users\Christiawan\Documents\GitHub\christiawan.web.id>touch README
-</span><span class='line'>C:\Users\Christiawan\Documents\GitHub\christiawan.web.id>git add README
-</span><span class='line'>C:\Users\Christiawan\Documents\GitHub\christiawan.web.id>git commit -m &lsquo;first commit&rsquo;
-</span><span class='line'>C:\Users\Christiawan\Documents\GitHub\christiawan.web.id>git remote add christiawan.web.id &lt;a href="https://github.com/christiawan/christiawan.web.id">https://github.com/christiawan/christiawan.web.id&lt;/a></span></code></pre></td></tr></table></div></figure></p>
+{% codeblock CMD %}
+C:\Users\Christiawan\Documents\GitHub\christiawan.web.id>git init
+C:\Users\Christiawan\Documents\GitHub\christiawan.web.id>touch README
+C:\Users\Christiawan\Documents\GitHub\christiawan.web.id>git add README
+C:\Users\Christiawan\Documents\GitHub\christiawan.web.id>git commit -m &lsquo;first commit&rsquo;
+C:\Users\Christiawan\Documents\GitHub\christiawan.web.id>git remote add christiawan.web.id <a href="https://github.com/christiawan/christiawan.web.id">https://github.com/christiawan/christiawan.web.id</a>
+{% endcodeblock %}</p>
 
 <h3>NB : christiawan.web.id adalah folder octopress</h3>
 
 <p>Setelah itu anda bisa klik <code>continue</code> pada halaman Gihub repository setup. Langkah selanjutnya adalah setup_github_pages di folder octopress anda :
-<figure class='code'><figcaption><span>CMD </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>C:\Users\Christiawan\Documents\GitHub\christiawan.web.id>rake setup_github_pages</span></code></pre></td></tr></table></div></figure>
-<figure class='code'><figcaption><span>CMD </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Enter the read/write url for your repository: git@github.com:christiawan/christiawan.web.id
-</span><span class='line'>Added remote git@github.com:christiawan/christiawan.web.id.git as origin
-</span><span class='line'>Set origin as default remote
-</span><span class='line'>Master branch renamed to &lsquo;source&rsquo; for committing your blog source files
-</span><span class='line'>Initialized empty Git repository in C:/Users/Christiawan/Documents/GitHub/christiawan.web.id/_deploy/.git/
-</span><span class='line'>[master (root-commit) 2a4e9e7] Octopress init
-</span><span class='line'>1 files changed, 1 insertions(+), 0 deletions(-)
-</span><span class='line'>create mode 100644 index.html</span></code></pre></td></tr></table></div></figure></p>
+{% codeblock CMD %}
+C:\Users\Christiawan\Documents\GitHub\christiawan.web.id>rake setup_github_pages
+{% endcodeblock %}
+{% codeblock CMD %}
+Enter the read/write url for your repository: git@github.com:christiawan/christiawan.web.id
+Added remote git@github.com:christiawan/christiawan.web.id.git as origin
+Set origin as default remote
+Master branch renamed to &lsquo;source&rsquo; for committing your blog source files
+Initialized empty Git repository in C:/Users/Christiawan/Documents/GitHub/christiawan.web.id/_deploy/.git/
+[master (root-commit) 2a4e9e7] Octopress init
+1 files changed, 1 insertions(+), 0 deletions(-)
+create mode 100644 index.html
+{% endcodeblock %}</p>
 
 <p>langkah selanjut'nya kita deploy ke github , dengan cara
-<figure class='code'><figcaption><span>CMD </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>C:\Users\Christiawan\Documents\GitHub\christiawan.web.id>rake generate &amp;&amp; rake deploy</span></code></pre></td></tr></table></div></figure></p>
+{% codeblock CMD %}
+C:\Users\Christiawan\Documents\GitHub\christiawan.web.id>rake generate &amp;&amp; rake deploy
+{% endcodeblock %}</p>
 
 <h3>jika rake deploy error //configurasi Email</h3>
 
-<p><figure class='code'><figcaption><span>CMD </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git config &ndash;global user.email &ldquo;&lt;a href="&#109;&#x61;&#105;&#x6c;&#x74;&#x6f;&#58;&#109;&#101;&#x40;&#99;&#104;&#114;&#105;&#115;&#116;&#105;&#x61;&#x77;&#97;&#x6e;&#46;&#x77;&#101;&#x62;&#46;&#105;&#x64;">&#x6d;&#101;&#x40;&#x63;&#x68;&#x72;&#105;&#x73;&#116;&#105;&#x61;&#x77;&#97;&#x6e;&#x2e;&#119;&#x65;&#x62;&#x2e;&#105;&#100;&lt;/a>&rdquo; //email yang anda daftarkan pada github</span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock CMD %}
+git config &ndash;global user.email &ldquo;<a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;&#109;&#x65;&#x40;&#x63;&#104;&#114;&#105;&#x73;&#x74;&#x69;&#97;&#x77;&#97;&#x6e;&#x2e;&#x77;&#x65;&#x62;&#x2e;&#105;&#100;">&#109;&#x65;&#x40;&#x63;&#104;&#114;&#105;&#x73;&#x74;&#x69;&#97;&#119;&#97;&#x6e;&#x2e;&#119;&#x65;&#98;&#x2e;&#105;&#100;</a>&rdquo; //email yang anda daftarkan pada github
+{% endcodeblock %}</p>
 
 <p>Oke selesai , untuk upload ke github :)
 sekarang coba deh buka github.io'nya , di browser
@@ -224,69 +206,56 @@ sekarang coba deh buka github.io'nya , di browser
 
 
 <p>Oke Coba kita cek Git &amp; Ruby -> Buka CMD
-<figure class='code'><figcaption><span>CMD </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git &ndash;version #akan muncul : git version 1.9.4.msysgit.0
-</span><span class='line'>ruby &ndash;version #akan muncul : ruby 1.9.3p545</span></code></pre></td></tr></table></div></figure></p>
+{% codeblock CMD %}
+git &ndash;version #akan muncul : git version 1.9.4.msysgit.0
+ruby &ndash;version #akan muncul : ruby 1.9.3p545
+{% endcodeblock %}</p>
 
 <p>Oke Peralatan Sudah siap , waktu'nya kita perang !</p>
 
 <p>Buka CMD
-<figure class='code'><figcaption><span>CMD </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cd Documents/Github
-</span><span class='line'>git clone git://github.com/imathis/octopress.git christiawan.web.id #ganti christiawan.web.id menjadi username.github.io
-</span><span class='line'>cd christiawan.web.id</span></code></pre></td></tr></table></div></figure></p>
+{% codeblock CMD %}
+cd Documents/Github
+git clone git://github.com/imathis/octopress.git christiawan.web.id #ganti christiawan.web.id menjadi username.github.io
+cd christiawan.web.id
+{% endcodeblock %}</p>
 
 <p>Masih dalam CMD | Lalu kita lanjut ikuti langkah berikut
-<figure class='code'><figcaption><span>CMD </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cd/Ruby/DevKit
-</span><span class='line'>ruby dk.rb init
-</span><span class='line'>ruby dk.rb install</span></code></pre></td></tr></table></div></figure></p>
+{% codeblock CMD %}
+cd/Ruby/DevKit
+ruby dk.rb init
+ruby dk.rb install
+{% endcodeblock %}</p>
 
 <p>Masih dalam CMD | Masuk ke file Octopress
-<figure class='code'><figcaption><span>CMD </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cd/Users/christiawan/documents/github/christiawan.web.id #ganti christiawan.web.id menjadi username.github.io
-</span><span class='line'>gem install bundler
-</span><span class='line'>bundle install</span></code></pre></td></tr></table></div></figure></p>
+{% codeblock CMD %}
+cd/Users/christiawan/documents/github/christiawan.web.id #ganti christiawan.web.id menjadi username.github.io
+gem install bundler
+bundle install
+{% endcodeblock %}</p>
 
 <p>Setelah itu kita install octopres
-<figure class='code'><figcaption><span>CMD </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake install</span></code></pre></td></tr></table></div></figure></p>
+{% codeblock CMD %}
+rake install
+{% endcodeblock %}</p>
 
 <p>Oke Octopress sudah kita install :)</p>
 
 <p>tapi kita belum selesai ! , karena kita belum konfigurasi <em>config.yml . untuk lebih detail'nya kalian bisa lihat di <a href="http://octopress.org/docs/configuring/">Konfigurasi Octopress</a> namun untuk configurasi awal kita , buka </em>config.yml
-<figure class='code'><figcaption><span>_config </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>url: &lt;a href="http://christiawan.web.id">http://christiawan.web.id&lt;/a> #ganti dengan username github
-</span><span class='line'>title: I&rsquo;m Christiawan
-</span><span class='line'>subtitle: &hellip;things I don&rsquo;t want to forget !
-</span><span class='line'>author: Christiawan Eko S
-</span><span class='line'>simple_search: &lt;a href="https://www.google.com/search">https://www.google.com/search&lt;/a>
-</span><span class='line'>description: Cerita &amp; Tutorial Pemrogramman</span></code></pre></td></tr></table></div></figure></p>
+{% codeblock _config %}
+url: <a href="http://christiawan.web.id">http://christiawan.web.id</a> #ganti dengan username github
+title: I&rsquo;m Christiawan
+subtitle: &hellip;things I don&rsquo;t want to forget !
+author: Christiawan Eko S
+simple_search: <a href="https://www.google.com/search">https://www.google.com/search</a>
+description: Cerita &amp; Tutorial Pemrogramman
+{% endcodeblock %}</p>
 
 <p>Okee ini baru selesai Installasi , eeittss sebelum kita upload coba kita preview di localhost:4000 dulu ! CMD lagi :)
-<figure class='code'><figcaption><span>CMD </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate
-</span><span class='line'>rake preview</span></code></pre></td></tr></table></div></figure>
+{% codeblock CMD %}
+rake generate
+rake preview
+{% endcodeblock %}
 nah sekarang coba buka browser lalu , buka localhost:4000
 Nah sekarang bisa deh di upload di server masing" :) kalau ga punya cari yang gratisan contoh : github , yang saya gunakan sekarang</p>
 
