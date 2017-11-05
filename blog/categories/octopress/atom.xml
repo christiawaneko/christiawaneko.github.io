@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Christiawan Eko]]></title>
   <link href="http://christiawaneko.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://christiawaneko.github.io/"/>
-  <updated>2017-11-05T15:24:24+07:00</updated>
+  <updated>2017-11-05T20:59:08+07:00</updated>
   <id>http://christiawaneko.github.io/</id>
   <author>
     <name><![CDATA[Christiawan Eko S]]></name>
@@ -176,7 +176,7 @@ tapi ada beberapa command yang harus disesuaikan dengan konfigurasi pada octopre
 
 <p><figure class='code'><figcaption><span>CMD </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git config &ndash;global user.email &ldquo;&lt;a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#x6d;&#101;&#x40;&#99;&#x68;&#114;&#x69;&#115;&#116;&#105;&#97;&#119;&#97;&#110;&#x2e;&#119;&#x65;&#x62;&#x2e;&#105;&#100;">&#109;&#101;&#64;&#99;&#x68;&#114;&#105;&#x73;&#x74;&#105;&#97;&#119;&#x61;&#110;&#x2e;&#x77;&#101;&#x62;&#46;&#105;&#x64;&lt;/a>&rdquo; //email yang anda daftarkan pada github</span></code></pre></td></tr></table></div></figure></p>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git config &ndash;global user.email &ldquo;&lt;a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#58;&#109;&#101;&#64;&#x63;&#104;&#x72;&#105;&#115;&#116;&#105;&#97;&#119;&#x61;&#110;&#x2e;&#x77;&#x65;&#x62;&#46;&#105;&#100;">&#x6d;&#x65;&#64;&#x63;&#x68;&#114;&#x69;&#115;&#116;&#105;&#97;&#x77;&#97;&#x6e;&#x2e;&#119;&#x65;&#98;&#46;&#105;&#100;&lt;/a>&rdquo; //email yang anda daftarkan pada github</span></code></pre></td></tr></table></div></figure></p>
 
 <p>Oke selesai , untuk upload ke github :)
 sekarang coba deh buka github.io'nya , di browser
