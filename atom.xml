@@ -4,7 +4,7 @@
   <title><![CDATA[Christiawan Eko]]></title>
   <link href="http://christiawaneko.github.io/atom.xml" rel="self"/>
   <link href="http://christiawaneko.github.io/"/>
-  <updated>2017-11-06T00:06:25+07:00</updated>
+  <updated>2017-11-06T00:16:37+07:00</updated>
   <id>http://christiawaneko.github.io/</id>
   <author>
     <name><![CDATA[Christiawan Eko S]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Local]]></title>
+    <link href="http://christiawaneko.github.io/blog/2017/11/06/local/"/>
+    <updated>2017-11-06T00:09:21+07:00</updated>
+    <id>http://christiawaneko.github.io/blog/2017/11/06/local</id>
+    <content type="html"><![CDATA[<p><strong>Local Berita </strong></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Building Successful]]></title>
