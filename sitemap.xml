@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://christiawaneko.github.io/blog/2017/11/06/local/</loc>
-<lastmod>2017-11-06T00:09:21+07:00</lastmod>
-</url>
-<url>
-<loc>http://christiawaneko.github.io/blog/2017/11/05/building-successful/</loc>
-<lastmod>2017-11-05T00:00:00+07:00</lastmod>
-</url>
-<url>
 <loc>http://christiawaneko.github.io/blog/2014/10/16/notepad-plus-plus-for-go-programming/</loc>
 <lastmod>2014-10-16T01:47:38+07:00</lastmod>
 </url>
